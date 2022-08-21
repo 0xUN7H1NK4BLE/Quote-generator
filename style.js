@@ -25,7 +25,6 @@ loading();
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
-        console.log(apiQuotes);
         autherText.textContent = apiQuotes.author;
         if (apiQuotes.length > 130) {
             quoteText.classList.add('long-quote')
